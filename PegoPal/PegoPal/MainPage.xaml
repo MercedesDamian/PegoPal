@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="PegoPal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PegoPal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background= "#FF2C3233">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="1" Background= "#FF495859"/>
+        <Border Grid.Row="2" />
+        <Border Grid.Row="3" Background= "#FF495859"/>
+
+        <Image Grid.Row="1" Source="Assets/CatalogMe_Logo.png" Height="100" />
+
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox x:Name="lblUserID"  TextWrapping="Wrap" Text="UserID:" IsReadOnly="True" BorderBrush="#FFFDF9F9" Background="#66FFFFFF" Foreground="Black" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtBoxUserId"  TextWrapping="Wrap" Text="" Width="148" Margin="0,0,0,15"/>
+            <TextBox x:Name="lblPasswd"  TextWrapping="Wrap" Text="Password:"  BorderBrush="#FFF9F9F9" IsReadOnly="True" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtBoxPasswd"  TextWrapping="Wrap" Text="" Width="148" Margin="0,0,0,15"/>
+            <Button x:Name="BtnSubmit" Content="Login"  Foreground="White" Click="BtnSubmit_Click" Background="#3308605F"/>
+            <Button x:Name="BtnRegister" Content="Register"  Foreground="White" Margin="0,10,0,0" Click="BtnRegister_Click" Background="#3308605F"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

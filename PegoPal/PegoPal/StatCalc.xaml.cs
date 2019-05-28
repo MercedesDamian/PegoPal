@@ -132,11 +132,44 @@ namespace PegoPal
                 }
             }
         }
-        
+
+        //Combobox Items
+        private void CI_Pegomastax_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Classes.Pegomastax();
+
+            string hits = Classes.Hits.ToString();
+            string stam = Classes.Stam.ToString();
+            string oxygen = Classes.Oxygen.ToString();
+            string food = Classes.Food.ToString();
+            string weight = Classes.Weight.ToString();
+            string damage = Classes.Damage.ToString();
+            string speed = Classes.Speed.ToString();
+            string torpor = Classes.Torpor.ToString();
+            
+
+            txtboxhits.Text = hits;
+            txtboxStam.Text = stam;
+            txtboxOxy.Text = oxygen;
+            txtboxFood.Text = food;
+            txtboxWeight.Text = weight;
+            txtboxDmg.Text = damage + "%";
+            txtboxSpeed.Text = speed + "%";
+            txtboxTorpor.Text = torpor;
+        }
+
+        private void Txtboxlevel_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            int value = 1;
+
+            value = int.Parse(txtboxlevel.Text);
+            Classes.Level = value;
+            Classes.Pegomastax();
+        }
 
         //end of code
     }
 
-    
+
 
 }

@@ -38,7 +38,7 @@
             </StackPanel>
         </Button>
 
-
+        <!-- Navigation -->
         <NavigationView x:Name="NavView" IsPaneOpen="False"
                     ItemInvoked="NavView_ItemInvoked"
                     SelectionChanged="NavView_SelectionChanged"
@@ -89,7 +89,61 @@
             </Frame>
 
         </NavigationView>
- 
-        
+
+        <!-- Row 2 Content boxes -->
+        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <ComboBox Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="290" Margin="30,8,0,0">
+                <ComboBoxItem x:Name="Pegomastax" Content="Pegomastax" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="CI_Pegomastax_Tapped"/>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Level" Text="Level:  " Width="222" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Right" FontSize="20"/>
+                <TextBox x:Name="txtboxlevel" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="1" TextChanging="Txtboxlevel_TextChanging"  >
+
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="TMultiplier" Text="Taming Multiplier:  " Width="222" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Right" FontSize="20" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                <TextBox x:Name="txtboxTMultiplier" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="1" TextChanging="Txtboxlevel_TextChanging"  >
+
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="CMultiplier" Text="Consumption Multiplier:  " Width="221" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Right" FontSize="20" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                <TextBox x:Name="txtboxCMultiplier" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="1" TextChanging="Txtboxlevel_TextChanging"  >
+
+                </TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Row 2 Center Content boxes -->
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Food" Text="" Width="84" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                <TextBlock x:Name="Quantity" Text="Quantity:  " Width="85" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Center" FontSize="20"/>
+                <TextBlock x:Name="Time" Text="Time:  " Width="85" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Center" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Kibble" Text="Kibble:  " Width="80" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20"/>
+                <TextBox x:Name="txtboxKQuantity" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="" IsReadOnly="True">
+                </TextBox>
+                <TextBox x:Name="txtboxKTime" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="" IsReadOnly="True">
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Mejoberry" Text="Mejo:  " Width="80" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20"/>
+                <TextBox x:Name="txtboxMQuantity" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="" IsReadOnly="True">
+                </TextBox>
+                <TextBox x:Name="txtboxMTime" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="" IsReadOnly="True">
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Berries" Text="Berry:  " Width="80" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20"/>
+                <TextBox x:Name="txtboxBQuantity" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="" IsReadOnly="True">
+                </TextBox>
+                <TextBox x:Name="txtboxBTime" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="" IsReadOnly="True">
+                </TextBox>
+            </StackPanel>
+        </StackPanel>
+
     </Grid>
 </Page>

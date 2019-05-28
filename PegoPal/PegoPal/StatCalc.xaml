@@ -38,7 +38,7 @@
             </StackPanel>
         </Button>
 
-
+        <!-- Navigation -->
         <NavigationView x:Name="NavView" IsPaneOpen="False"
                     ItemInvoked="NavView_ItemInvoked"
                     SelectionChanged="NavView_SelectionChanged"
@@ -89,7 +89,8 @@
             </Frame>
 
         </NavigationView>
-
+        
+        <!-- Row 2 Content boxes -->
         <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
             <ComboBox Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="300" Margin="30,8,0,0">
                 <ComboBoxItem x:Name="Pegomastax" Content="Pegomastax" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="CI_Pegomastax_Tapped"/>

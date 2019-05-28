@@ -132,6 +132,36 @@ namespace PegoPal
             }
         }
 
+        //Combobox Items
+        private void CI_Pegomastax_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Classes.Pegomastax();
+
+            string kibble = Classes.Kibble.ToString();
+            string mejoberries = Classes.Mejoberries.ToString();
+            string berries = Classes.Berries.ToString();
+
+
+
+            txtboxMQuantity.Text = mejoberries;
+            txtboxKQuantity.Text = kibble;
+            txtboxBQuantity.Text = berries;
+
+            txtboxKTime.Text = Classes.KTime;
+            txtboxMTime.Text = Classes.MTime;
+            txtboxBTime.Text = Classes.BTime;
+
+        }
+
+        private void Txtboxlevel_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            int value = 1;
+
+            value = int.Parse(txtboxlevel.Text);
+            Classes.Level = value;
+            Classes.Pegomastax();
+        }
+
         //end code
     }
 }

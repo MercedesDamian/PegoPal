@@ -10,7 +10,9 @@ namespace PegoPal
     class Classes
     {
         public static int IsAuth = 0;
+        public static int Level = 1;
 
+        //Stat Calc
         public static int Hits { get; set; }
         public static int Stam { get; set; }
         public static int Oxygen { get; set; }
@@ -20,13 +22,20 @@ namespace PegoPal
         public static int Speed { get; set; }
         public static double Torpor { get; set; }
 
-        public static int Level = 1;
+        //Taming
+        public static int Kibble { get; set; }
+        public static int Mejoberries { get; set; }
+        public static int Berries { get; set; }
 
-        //Course Descriptions for CourseInfo Page
+        //Taming time
+        public static string KTime { get; set; }
+        public static string MTime { get; set; }
+        public static string BTime { get; set; }
 
+        //Stat Calc Combo Items
         public static void Pegomastax()
         {
-
+            //stats
             if (Level > 1)
             {
                 Hits = 200 + (40 * (Level-1));
@@ -50,7 +59,35 @@ namespace PegoPal
                 Speed = 100;
                 Torpor = 30;
             }
+
+            //taming
+            if (Level > 1)
+            {
+                Kibble = 2;
+                Mejoberries = 21;
+                Berries = 31;
+
+                KTime = "00:00:32";
+                MTime = "00:02:07";
+                BTime = "00:02:04";
+
+            }
+            else
+            {
+                Kibble = 2;
+                Mejoberries = 21;
+                Berries = 31;
+
+                KTime = "00:00:32";
+                MTime = "00:02:07";
+                BTime = "00:02:04";
+            }
+
+            //end pegomastax
         }
+
+        //end combobox items
+
 
 
     }

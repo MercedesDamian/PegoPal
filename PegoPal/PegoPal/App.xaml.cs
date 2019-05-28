@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Microsoft.WindowsAzure.MobileServices;
+
 namespace PegoPal
 {
     /// <summary>
@@ -22,6 +24,17 @@ namespace PegoPal
     /// </summary>
     sealed partial class App : Application
     {
+
+        // This MobileServiceClient has been configured to communicate with the Azure Mobile Service and
+        // Azure Gateway using the application url. You're all set to start working with your Mobile Service!
+        public static MobileServiceClient PegoPalClient = new MobileServiceClient("https://pegopal.azurewebsites.net");
+
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://pegopal.azurewebsites.net");
+
+        private string connectionString =
+       @"Data Source=pegopal.database.windows.net\SQLEXPRESS;Initial Catalog=PegoPal_db;User Id = SadieAdmin; Password = M@rc@t11";
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

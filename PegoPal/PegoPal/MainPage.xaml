@@ -18,19 +18,53 @@
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
         <Border Grid.Row="1" Background= "#FF495859"/>
-        <Border Grid.Row="2" />
         <Border Grid.Row="3" Background= "#FF495859"/>
 
-        <Image Grid.Row="1" Source="Assets/CatalogMe_Logo.png" Height="100" />
+<!-- Row 1 Icon/ Logo/ Sign In -->
+        <Image Grid.Row="1" Source="Assets/InAppIcon.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Height="82" Width="76" />
+        <Image Grid.Row="1" Source="Assets/PegoPal_Logo.png" Height="100" Margin="20,10,0,0" />
 
+        <Button Name="ButtonLogin" Grid.Row="0" Margin="0,8,8,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Visible" Click="ButtonLogin_Click" >
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Permissions" Foreground="White"/>
+                <TextBlock Margin="5" FontFamily="Segoe UI" Foreground="White">Sign In</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Name="ButtonSignoff" Grid.Row="0" Margin="0,8,8,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" Click="ButtonSignoff_Click" >
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Permissions" Foreground="White"/>
+                <TextBlock Margin="5" FontFamily="Segoe UI" Foreground="White">Sign Out</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <!-- Navigation -->
         <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox x:Name="lblUserID"  TextWrapping="Wrap" Text="UserID:" IsReadOnly="True" BorderBrush="#FFFDF9F9" Background="#66FFFFFF" Foreground="Black" Margin="0,0,0,10"/>
-            <TextBox x:Name="txtBoxUserId"  TextWrapping="Wrap" Text="" Width="148" Margin="0,0,0,15"/>
-            <TextBox x:Name="lblPasswd"  TextWrapping="Wrap" Text="Password:"  BorderBrush="#FFF9F9F9" IsReadOnly="True" Margin="0,0,0,10"/>
-            <TextBox x:Name="txtBoxPasswd"  TextWrapping="Wrap" Text="" Width="148" Margin="0,0,0,15"/>
-            <Button x:Name="BtnSubmit" Content="Login"  Foreground="White" Click="BtnSubmit_Click" Background="#3308605F"/>
-            <Button x:Name="BtnRegister" Content="Register"  Foreground="White" Margin="0,10,0,0" Click="BtnRegister_Click" Background="#3308605F"/>
-
+            <StackPanel Orientation="Horizontal">
+                <Button Name="CreaturesTile" Width="120" Height="120" Tapped="Creatures_Tapped">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/CreaturesTile.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Name="RecipesTile" Width="120" Height="120" Tapped="Creatures_Tapped" Margin="5,0,0,0" Click="RecipesTile_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/Recipes.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Padding="0,5,0,0">
+                <Button Name="CommandsTile" Width="120" Height="120" Tapped="Creatures_Tapped" Click="CommandsTile_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/CommandsTile.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Name="StatCalcTile" Width="120" Height="120" Margin="5,0,0,0" Click="StatCalcTile_Click">
+                    <SymbolIcon Symbol="Calculator" Height="120" VerticalAlignment="Top"/>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/StatCalc.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

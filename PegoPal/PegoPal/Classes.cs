@@ -32,9 +32,18 @@ namespace PegoPal
         public static string MTime { get; set; }
         public static string BTime { get; set; }
 
+        public static TimeSpan Timevariable { get; set; }
+
+        public static TimeSpan KTimespan { get; set; }
+        public static TimeSpan MTimespan { get; set; }
+        public static TimeSpan BTimespan { get; set; }
+
+
         //Stat Calc Combo Items
         public static void Pegomastax()
         {
+            Timevariable = new TimeSpan(0, 0, 30);
+
             //stats
             if (Level > 1)
             {
@@ -81,6 +90,15 @@ namespace PegoPal
                 KTime = "00:00:32";
                 MTime = "00:02:07";
                 BTime = "00:02:04";
+
+                KTimespan = TimeSpan.Parse(KTime);
+                for (int i = 0; i < Level; i++)
+                {
+                    KTimespan = (KTimespan + Timevariable); 
+                    
+                }
+
+                KTime = KTimespan.ToString();
             }
 
             //end pegomastax

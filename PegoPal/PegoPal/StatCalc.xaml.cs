@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 
@@ -101,6 +102,14 @@ namespace PegoPal
                     case "calculator":
                         this.Frame.Navigate(typeof(StatCalc));
                         break;
+
+                    case "commands":
+                        this.Frame.Navigate(typeof(Commands));
+                        break;
+
+                    case "recipes":
+                        this.Frame.Navigate(typeof(Recipes));
+                        break;
                 }
             }
         }
@@ -129,6 +138,14 @@ namespace PegoPal
                     case "calculator":
                         this.Frame.Navigate(typeof(StatCalc));
                         break;
+
+                    case "commands":
+                        this.Frame.Navigate(typeof(Commands));
+                        break;
+
+                    case "recipes":
+                        this.Frame.Navigate(typeof(Recipes));
+                        break;
                 }
             }
         }
@@ -156,6 +173,14 @@ namespace PegoPal
             txtboxDmg.Text = damage + "%";
             txtboxSpeed.Text = speed + "%";
             txtboxTorpor.Text = torpor;
+
+            BitmapImage bitmapImage = new BitmapImage
+            {
+                // Call BaseUri on the root Page element and combine it with a relative path
+                // to consruct an absolute URI.
+                UriSource = new Uri(this.BaseUri, "https://www.dododex.com/media/creature/pegomastax.png")
+            };
+            DinoImage.Source = bitmapImage;
         }
 
         private void Txtboxlevel_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)

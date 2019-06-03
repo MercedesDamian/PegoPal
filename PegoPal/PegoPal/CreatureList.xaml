@@ -55,6 +55,8 @@
                 <NavigationViewItemHeader Content="Main pages"/>
                 <NavigationViewItem Content="Creatures" Tag="creatures"/>
                 <NavigationViewItem Content="Stat Calculator" Tag="calculator"/>
+                <NavigationViewItem Content="Commands" Tag="commands"/>
+                <NavigationViewItem Content="Recipes" Tag="recipes"/>
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>

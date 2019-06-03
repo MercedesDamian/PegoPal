@@ -96,6 +96,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes.cs" />
+    <Compile Include="Commands.xaml.cs">
+      <DependentUpon>Commands.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="CreatureList.xaml.cs">
       <DependentUpon>CreatureList.xaml</DependentUpon>
@@ -104,6 +107,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipes.xaml.cs">
+      <DependentUpon>Recipes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StatCalc.xaml.cs">
       <DependentUpon>StatCalc.xaml</DependentUpon>
     </Compile>
@@ -140,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Commands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreatureList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -147,6 +157,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Recipes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StatCalc.xaml">
       <SubType>Designer</SubType>

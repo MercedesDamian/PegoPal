@@ -21,9 +21,9 @@ namespace PegoPal
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CreatureList : Page
+    public sealed partial class Commands : Page
     {
-        public CreatureList()
+        public Commands()
         {
             this.InitializeComponent();
             this.SignInBtn();
@@ -148,54 +148,27 @@ namespace PegoPal
             }
         }
 
-        //Combobox Items
-        private void CI_Pegomastax_Tapped(object sender, TappedRoutedEventArgs e)
+        //Combobox items - Commands
+        private void CI_MHatchet_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Classes.Pegomastax();
-
-            string kibble = Classes.Kibble.ToString();
-            string mejoberries = Classes.Mejoberries.ToString();
-            string berries = Classes.Berries.ToString();
-
-
-
-            txtboxMQuantity.Text = mejoberries;
-            txtboxKQuantity.Text = kibble;
-            txtboxBQuantity.Text = berries;
-
-            txtboxKTime.Text = Classes.KTime;
-            txtboxMTime.Text = Classes.MTime;
-            txtboxBTime.Text = Classes.BTime;
-
+            txtboxCommand.Text = "admincheat GFI WeaponMetalHatchet 1 1 0";
         }
 
-        // multipliers
-        private void Txtboxlevel_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        private void MPick_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            int value = 1;
-
-            value = int.Parse(txtboxlevel.Text);
-            Classes.Level = value;
-            Classes.Pegomastax();
+            txtboxCommand.Text = "admincheat GFI WeaponMetalPick 1 1 0";
         }
 
-        private void TxtboxTMultiplier_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        private void SHatchet_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            int value = 1;
-
-            value = int.Parse(txtboxlevel.Text);
-            Classes.Level = value;
-            Classes.Pegomastax();
-        }
-        private void TxtboxCMultiplier_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
-        {
-            int value = 1;
-
-            value = int.Parse(txtboxlevel.Text);
-            Classes.Level = value;
-            Classes.Pegomastax();
+            txtboxCommand.Text = "admincheat GFI WeaponStoneHatchet 1 1 0";
         }
 
-        //end code
+        private void SPick_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            txtboxCommand.Text = "admincheat GFI WeaponStonePick 1 1 0";
+        }
+
+        //end of code
     }
 }

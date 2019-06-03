@@ -75,12 +75,12 @@ namespace PegoPal
 
         private void RecipesTile_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(Recipes));
         }
 
         private void CommandsTile_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(Commands));
         }
     }
 }

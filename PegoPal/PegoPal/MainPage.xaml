@@ -59,7 +59,6 @@
                     </Button.Background>
                 </Button>
                 <Button Name="StatCalcTile" Width="120" Height="120" Margin="5,0,0,0" Click="StatCalcTile_Click">
-                    <SymbolIcon Symbol="Calculator" Height="120" VerticalAlignment="Top"/>
                     <Button.Background>
                         <ImageBrush ImageSource="Assets/StatCalc.png"/>
                     </Button.Background>

@@ -1,0 +1,112 @@
+﻿<Page
+    x:Class="PegoPal.Commands"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PegoPal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background= "#FF2C3233">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="1" Background= "#FF495859"/>
+        <Border Grid.Row="3" Background= "#FF495859"/>
+
+        <!-- Row 1 Icon/ Logo/ Sign In -->
+        <Image Grid.Row="1" Source="Assets/InAppIcon.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Height="82" Width="76" />
+        <Image Grid.Row="1" Source="Assets/PegoPal_Logo.png" Height="100" Margin="20,10,0,0" />
+
+        <Button Name="ButtonLogin" Grid.Row="0" Margin="0,8,8,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Visible" Click="ButtonLogin_Click" >
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Permissions" Foreground="White"/>
+                <TextBlock Margin="5" FontFamily="Segoe UI" Foreground="White">Sign In</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Name="ButtonSignoff" Grid.Row="0" Margin="0,8,8,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" Click="ButtonSignoff_Click" >
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Permissions" Foreground="White"/>
+                <TextBlock Margin="5" FontFamily="Segoe UI" Foreground="White">Sign Out</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <!-- Navigation -->
+        <NavigationView x:Name="NavView" IsPaneOpen="False"
+                    ItemInvoked="NavView_ItemInvoked"
+                    SelectionChanged="NavView_SelectionChanged"
+                    Loaded="NavView_Loaded"
+                    Grid.RowSpan="4" >
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Home" Tag="home">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE10F;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Main pages"/>
+                <NavigationViewItem Content="Creatures" Tag="creatures"/>
+                <NavigationViewItem Content="Stat Calculator" Tag="calculator"/>
+                <NavigationViewItem Content="Commands" Tag="commands"/>
+                <NavigationViewItem Content="Recipes" Tag="recipes"/>
+            </NavigationView.MenuItems>
+
+            <NavigationView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="24,24,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                           FontSize="28"
+                           VerticalAlignment="Center"
+                           Text="Welcome"/>
+                        <CommandBar Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            DefaultLabelPosition="Right"
+                            Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+                            <AppBarButton Label="Refresh" Icon="Refresh"/>
+                            <AppBarButton Label="Import" Icon="Import"/>
+                        </CommandBar>
+                    </Grid>
+                </DataTemplate>
+            </NavigationView.HeaderTemplate>
+
+            <Frame x:Name="ContentFrame" Margin="24">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+
+        </NavigationView>
+
+        <!-- Row 2 Content boxes -->
+        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock x:Name="DropdownTitle" Text="Select A Command:  " Margin="91,16,158,0" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="188"/>
+            <ComboBox Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="286" Margin="30,5,0,0">
+                <ComboBoxItem x:Name="MHatchet" Content="Metal Hatchet" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="CI_MHatchet_Tapped"/>
+                <ComboBoxItem x:Name="MPick" Content="Metal Pickaxe" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="MPick_Tapped"/>
+                <ComboBoxItem x:Name="SHatchet" Content="Stone Hatchet" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="SHatchet_Tapped"/>
+                <ComboBoxItem x:Name="SPick" Content="Stone Pickaxe" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="SPick_Tapped"/>
+
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" VerticalAlignment="Center">
+            <TextBlock x:Name="CommandTitle" Text="Console Command:  " Margin="91,0,158,0" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20"/>
+            <TextBox x:Name="txtboxCommand" Margin="91,0,63,0" FontFamily="Segoe UI" Text="" IsReadOnly="True" Height="109" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

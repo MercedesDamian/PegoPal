@@ -111,6 +111,7 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="Stats" Text="Stats:  " Width="267" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20" Margin="0,0,0,10"/>
             <StackPanel Orientation="Horizontal">
                 <TextBlock x:Name="Hits" Text="Health:  " Width="80" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Right" FontSize="20"/>
                 <TextBox x:Name="txtboxhits" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="79" FontFamily="Segoe UI" Text="" IsReadOnly="True">

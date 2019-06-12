@@ -92,5 +92,72 @@
 
         </NavigationView>
 
+        <!-- Content -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition  Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!-- Dropdown Menu -->
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <StackPanel>
+                    <TextBlock x:Name="CB_Label" Text="Select a Recipe:  " HorizontalAlignment="Center" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20" Margin="0,5,0,0" VerticalAlignment="Stretch" Width="290"/>
+                    <ComboBox HorizontalAlignment="Stretch" Width="290" Margin="0,5,0,0">
+                        <ComboBoxItem x:Name="SimpleKibble" Content="Simple Kibble" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="SimpleKibble_Tapped"/>
+                        <ComboBoxItem x:Name="RegularKibble" Content="Regular Kibble" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="RegularKibble_Tapped"/>
+                        <ComboBoxItem x:Name="SuperiorKibble" Content="Superior Kibble" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="SuperiorKibble_Tapped"/>
+                        <ComboBoxItem x:Name="ExceptionalKibble" Content="Exceptional Kibble" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="ExceptionalKibble_Tapped"/>
+                        <ComboBoxItem x:Name="ExtraordinaryKibble" Content="Extraordinary Kibble" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="ExtraordinaryKibble_Tapped"/>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image x:Name="EggImage" Grid.Column="1" HorizontalAlignment="Center" />
+
+            </Grid>
+            <TextBox x:Name="EggType" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="245" IsReadOnly="True"/>
+
+            <Grid Grid.Row="2">
+                <Image x:Name="MeatImage" Grid.Column="1" HorizontalAlignment="Center" />
+
+            </Grid>
+            <TextBox x:Name="MeatType" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="245" IsReadOnly="True"/>
+
+            <Grid Grid.Row="3">
+                <Image x:Name="VegImage" Grid.Column="1" HorizontalAlignment="Center" />
+
+            </Grid>
+            <TextBox x:Name="VegType" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="245" IsReadOnly="True"/>
+
+            <Grid Grid.Row="4">
+                <Image x:Name="BerryImage" Grid.Column="1" HorizontalAlignment="Center" />
+
+            </Grid>
+            <TextBox x:Name="BerryType" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="245" IsReadOnly="True"/>
+
+            <Grid Grid.Row="5">
+                <Image x:Name="FiberImage" Grid.Column="1" HorizontalAlignment="Center" />
+
+            </Grid>
+            <TextBox x:Name="FiberType" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="245" IsReadOnly="True"/>
+
+            <Grid Grid.Row="6">
+                <Image x:Name="WaterImage" Grid.Column="1" HorizontalAlignment="Center" />
+
+            </Grid>
+            <TextBox x:Name="WaterType" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="245" IsReadOnly="True"/>
+
+        </Grid>
+
     </Grid>
 </Page>

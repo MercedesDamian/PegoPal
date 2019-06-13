@@ -196,6 +196,25 @@ namespace PegoPal
             Classes.Pegomastax();
         }
 
+        private void CI_Giganotosaurus_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Classes.Giganotosaurus();
+
+            string kibble = Classes.Kibble.ToString();
+            string mejoberries = Classes.Mejoberries.ToString();
+            string berries = Classes.Berries.ToString();
+
+
+
+            txtboxMQuantity.Text = mejoberries;
+            txtboxKQuantity.Text = kibble;
+            txtboxBQuantity.Text = berries;
+
+            txtboxKTime.Text = Classes.KTime;
+            txtboxMTime.Text = Classes.MTime;
+            txtboxBTime.Text = Classes.BTime;
+        }
+
         //end code
     }
 }

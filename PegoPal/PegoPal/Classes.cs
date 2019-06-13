@@ -26,6 +26,8 @@ namespace PegoPal
         public static int Kibble { get; set; }
         public static int Mejoberries { get; set; }
         public static int Berries { get; set; }
+        public static int Mutton { get; set; }
+        public static int PrimeM { get; set; }
 
         //Taming time
         public static string KTime { get; set; }
@@ -47,7 +49,7 @@ namespace PegoPal
             //stats
             if (Level > 1)
             {
-                Hits = 200 + (40 * (Level-1));
+                Hits = 200 + (40 * (Level - 1));
                 Stam = 100 + (10 * (Level - 1));
                 Oxygen = 150 + (15 * (Level - 1));
                 Food = 450 + (45 * (Level - 1));
@@ -94,19 +96,83 @@ namespace PegoPal
                 KTimespan = TimeSpan.Parse(KTime);
                 for (int i = 0; i < Level; i++)
                 {
-                    KTimespan = (KTimespan + Timevariable); 
-                    
+                    KTimespan = (KTimespan + Timevariable);
+
                 }
 
                 KTime = KTimespan.ToString();
             }
-
-            //end pegomastax
         }
 
+        //end pegomastax
+
+        public static void Giganotosaurus()
+        {
+            Timevariable = new TimeSpan(0, 0, 30);
+
+            //stats
+            if (Level > 1)
+            {
+                Hits = 80000 + (40 * (Level - 1));
+                Stam = 400 + (1 * (Level - 1));
+                Oxygen = 150 + (1 * (Level - 1));
+                Food = 4000 + (10 * (Level - 1));
+                Weight = 700 + (7 * (Level - 1));
+                Damage = 100 + (5 * (Level - 1));
+                Speed = 100;
+                Torpor = 10000 + (600 * (Level - 1));
+
+            }
+            else
+            {
+                Hits = 80000;
+                Stam = 400;
+                Oxygen = 150;
+                Food = 4000;
+                Weight = 700;
+                Damage = 100;
+                Speed = 100;
+                Torpor = 10000;
+            }
+
+            //taming
+            if (Level > 1)
+            {
+                Kibble = 7;
+                Mutton = 14;
+                PrimeM = 18;
+
+                KTime = "00:25:12";
+                MTime = "00:31:31";
+                BTime = "00:40:31";
+
+            }
+            else
+            {
+                Kibble = 7;
+                Mutton = 14;
+                PrimeM = 18;
+
+                KTime = "00:25:12";
+                MTime = "00:31:31";
+                BTime = "00:40:31";
+
+                KTimespan = TimeSpan.Parse(KTime);
+                for (int i = 0; i < Level; i++)
+                {
+                    KTimespan = (KTimespan + Timevariable);
+
+                }
+
+                KTime = KTimespan.ToString();
+            }
+        }
         //end combobox items
 
-
-
+        //end of code
     }
 }
+
+
+
+

@@ -101,6 +101,7 @@
                     <TextBlock x:Name="TitleDino" Text="Select A Dino:  " Margin="0,16,0,0" Width="267" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Left" FontSize="20"/>
                     <ComboBox Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0">
                         <ComboBoxItem x:Name="Pegomastax" Content="Pegomastax" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="CI_Pegomastax_Tapped"/>
+                        <ComboBoxItem x:Name="Giganotosaurus" Content="Giganotosaurus" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="300" Tapped="CI_Giganotosaurus_Tapped"/>
                     </ComboBox>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,1,0">
                         <TextBlock x:Name="Level" Text="Level:  " Width="55" FocusVisualPrimaryBrush="Black" Foreground="White" TextAlignment="Right" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>

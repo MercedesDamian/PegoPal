@@ -174,13 +174,13 @@ namespace PegoPal
             txtboxSpeed.Text = speed + "%";
             txtboxTorpor.Text = torpor;
 
-            BitmapImage bitmapImage = new BitmapImage
+            BitmapImage PegoImage = new BitmapImage
             {
                 // Call BaseUri on the root Page element and combine it with a relative path
                 // to consruct an absolute URI.
                 UriSource = new Uri(this.BaseUri, "https://www.dododex.com/media/creature/pegomastax.png")
             };
-            DinoImage.Source = bitmapImage;
+            DinoImage.Source = PegoImage;
         }
 
         private void Txtboxlevel_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -190,6 +190,38 @@ namespace PegoPal
             value = int.Parse(txtboxlevel.Text);
             Classes.Level = value;
             Classes.Pegomastax();
+        }
+
+        private void CI_Giganotosaurus_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Classes.Giganotosaurus();
+
+            string hits = Classes.Hits.ToString();
+            string stam = Classes.Stam.ToString();
+            string oxygen = Classes.Oxygen.ToString();
+            string food = Classes.Food.ToString();
+            string weight = Classes.Weight.ToString();
+            string damage = Classes.Damage.ToString();
+            string speed = Classes.Speed.ToString();
+            string torpor = Classes.Torpor.ToString();
+
+
+            txtboxhits.Text = hits;
+            txtboxStam.Text = stam;
+            txtboxOxy.Text = oxygen;
+            txtboxFood.Text = food;
+            txtboxWeight.Text = weight;
+            txtboxDmg.Text = damage + "%";
+            txtboxSpeed.Text = speed + "%";
+            txtboxTorpor.Text = torpor;
+
+            BitmapImage GigaImage = new BitmapImage
+            {
+                // Call BaseUri on the root Page element and combine it with a relative path
+                // to consruct an absolute URI.
+                UriSource = new Uri(this.BaseUri, "https://www.dododex.com/media/creature/giganotosaurus.png")
+            };
+            DinoImage.Source = GigaImage;
         }
 
         //end of code

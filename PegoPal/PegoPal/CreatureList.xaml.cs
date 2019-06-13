@@ -201,8 +201,8 @@ namespace PegoPal
             Classes.Giganotosaurus();
 
             string kibble = Classes.Kibble.ToString();
-            string mejoberries = Classes.Mejoberries.ToString();
-            string berries = Classes.Berries.ToString();
+            string mejoberries = Classes.Mutton.ToString();
+            string berries = Classes.PrimeM.ToString();
 
 
 
